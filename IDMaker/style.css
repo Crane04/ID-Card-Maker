@@ -64,9 +64,11 @@ address{
 }
 img{
     width: 100px;
+    height:250px;
 }
 .logo{
     width: 50px;
+    height:55px;
 }
 .addInfo{
     display: flex;
