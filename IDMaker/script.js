@@ -66,25 +66,13 @@ else{
 }
 }
 
-function downloadID(filename,text){
-let element=document.createElement("a")
-element.setAttribute("href","data:text/plain;charset=utf-8,"+encodeURIComponent(text))
-element.setAttribute("download",filename);
-element.style.display="none"
-document.body.appendChild(element);
-element.click()
-document.body.remove(element);
-
-
-}
 
 function download(){
-//let container=document.querySelector("idbox")
 html2canvas(idbox,{allowTaint:true}).then(
     function(canvas){
         let link=document.createElement("a")
         document.body.appendChild(link)
-        link.download="id.jpg"
+        link.download=`${fname.value}ID.jpg`
         link.href=canvas.toDataURL()
         link.target="_blank"
         link.click()
