@@ -72,7 +72,7 @@ html2canvas(idbox,{allowTaint:true}).then(
     function(canvas){
         let link=document.createElement("a")
         document.body.appendChild(link)
-        link.download=`${fname.value}ID.jpg`
+        link.download=`${inpfname.value}ID.jpg`
         link.href=canvas.toDataURL()
         link.target="_blank"
         link.click()
