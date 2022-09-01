@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Maker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <H1>ID Card Generator</H1>
+<div class="container">
+    <div class="labels">
+        <label>Company Name:  <input type="text" id="cname"></label>
+        <label>Address: <input type="text" id="address"></label>
+        <label>Full Name: <input type="text" id="fname"></label>
+        <label>Company Logo: <input type="file" id="inplogo" accept="image/png,image/jpg,image/jpeg" onchange="logofile()"></label>
+        <label>Date of Birth: <input type="date" id="dob"></label>
+        <label>Nationality:
+            <select id="nationality">     
+                <option selected ></option>
+                <option>Nigeria</option>
+                <option>Ghana</option>
+                <option>USA</option>    
+              </select>
+        </label>
+        <label>Gender:
+            <select id="gender">
+                <option selected></option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+        </label>
+        <label>Occupation: <input type="text" id="occupation"></label>
+        <label>Contact: <input type="text" id="contact"></label>
+        <label>Text Color: <input type="color" id="tcolor" ></label>
+        <label>Background Color: <input type="color" id="bcolor"></label>
+        <label >Image: <input type="file" id="userimage" onchange="imagefile()"></label>
+        <button onclick="getID()">GET ID</button>
+    </div>
+</div>
+<div class="generateID">
+    <div class="idbox">
+        
+        <div class="header">
+            <img class="logo">
+            <div class="innheader">
+                <h1 class="company"> </h1>
+            <address></address>
+            </div>
+        </div>
+    <hr>
+        <div class="addInfo">
+                <img class="image" >
+            <div class="part1">
+                <p class="fname"></p>
+                <p class="dob"></p>
+                <p class="occupation"></p>
+            </div>
+            <div class="part2">
+                <p class="nationality"></p>
+                <p class="gender"></p>
+                <p class="contact"></p><br>
+            </div>
+        </div>
+    </div>
+    
+<button id="download" onclick="download()">Download ID Card</button>
+</div>
+<script src="script.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+</body>
+</html>
